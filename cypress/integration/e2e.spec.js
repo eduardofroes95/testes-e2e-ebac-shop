@@ -3,7 +3,6 @@
 const dadosPerfil = require('../fixtures/perfil.json')
 const massaDados = require('../fixtures/massaDados.json')
 //importando a classe comprare2e e seus métodos
-import adcProdutos from '../support/page_objects/adicionarProdutos'
 import vendas from '../support/page_objects/finalizarVenda'
 // Olá professor Fábio!
 
@@ -23,7 +22,10 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
         //TODO 
-        adcProdutos.adicionarProdutos(massaDados[0].quantidade)
+        cy.adicionarProduto(0, 'XL', 1, 'Red')
+        cy.adicionarProduto(1, 'XL', 1, 'Black')
+        cy.adicionarProduto(2, '32', 1, 'Green')
+        cy.adicionarProduto(3, 'XL', 1, 'Blue')
        // cy.get('.sub-title > .woocommerce-Price-amount > bdi').should('contain', 'R$708,00')
     })
 
