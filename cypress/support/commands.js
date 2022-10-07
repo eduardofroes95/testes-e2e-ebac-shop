@@ -44,5 +44,4 @@ Cypress.Commands.add('adicionarProduto', (produto, tamanho, quantidade, cor) => 
     cy.get('.button-variable-item-' + cor).click()
     
     cy.get('.single_add_to_cart_button').click()
-
 })
