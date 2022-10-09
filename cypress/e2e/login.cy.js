@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 let dadosLogin
-
+const eduardo = "qa"
 context('Funcionalidade Login', () => {
     before(() => {
         cy.fixture('perfil').then(perfil => {
